@@ -1,0 +1,23 @@
+:root {
+    /* Основні кольори */
+    --primary-color: #02897A;
+    --accent-orange: #FF9900;
+    --text-main: #22343D;
+    --text-secondary: #544837;
+    --white: #FFFFFF;
+
+    /* Кольори фону іконок */
+    --icon-purple: #7752BE;
+    --icon-yellow: #FAB005;
+    --icon-red: #F03E3E;
+    --icon-blue: #228BE6;
+
+    /* Колір овалу в Hero */
+    --hero-bg-circle: #FFE5D2;
+
+    /* Типографіка */
+    --font-main: 'Montserrat', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+}
