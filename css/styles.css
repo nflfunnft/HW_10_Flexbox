@@ -1,4 +1,4 @@
-/* Базові стилі */
+/* --- 1. Глобальні налаштування (залишаємо body) --- */
 * {
     margin: 0;
     padding: 0;
@@ -14,14 +14,21 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+    /* Захисні відступи по боках */
 }
 
-/* Header */
+/* --- 2. Хедер (Лого - Меню по центру - Кнопки) --- */
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    /* Щоб логотип не стискався */
 }
 
 .header__logo img {
@@ -30,68 +37,57 @@ body {
     display: block;
 }
 
-/* 1. Список стає рядком і без крапок */
-.nav-list {
+.header__nav {
+    flex-grow: 1;
+    /* Займає весь простір між лого і кнопками */
     display: flex;
-    /* Вже є, просто переконайся */
-    list-style: none;
-    /* Прибирає крапки */
-    gap: 30px;
-    /* Відстань між Product, Customers тощо */
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    /* Рівно по центру */
 }
 
-/* 2. Посилання: спочатку всі однакові (чорні, не жирні) */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
 .nav-list__link {
     text-decoration: none;
     color: var(--text-main);
     font-weight: var(--font-weight-medium);
-    transition: color 0.3s ease, font-weight 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-/* 3. Магія при наведенні: помаранчевий + жирний */
 .nav-list__link:hover {
     color: var(--accent-orange);
-    /* Колір #FF9900 з твоїх vars.css */
     font-weight: var(--font-weight-bold);
 }
 
-/* --- Універсальні Кнопки --- */
+/* --- 3. Кнопки --- */
+.header__auth {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+    /* Щоб кнопки не стискалися */
+}
 
 .btn {
-    /* Розміри та шрифт */
     padding: 12px 25px;
     border-radius: 4px;
     font-weight: var(--font-weight-bold);
     font-family: inherit;
     font-size: 16px;
-
-    /* Базовий стан: біла з рамкою */
-    background-color: #ffffff;
+    cursor: pointer;
+    background-color: var(--white);
     color: var(--text-main);
     border: 1px solid #BCD0E5;
-
-    /* Взаємодія */
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
     transition: all 0.3s ease;
 }
 
-/* Стан при наведенні для ВСІХ кнопок на сайті */
 .btn:hover {
     background-color: var(--accent-orange);
     border-color: var(--accent-orange);
-    color: #ffffff;
-    opacity: 1;
-    /* Гарантуємо, що ніяка прозорість не заважає */
-}
-
-/* Контейнери для відступів (флексбокси залишаємо там, де треба ряд) */
-.header__auth {
-    display: flex;
-    gap: 15px;
+    color: var(--white);
 }
 
 /* Hero Section */
