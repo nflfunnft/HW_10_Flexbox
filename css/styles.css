@@ -24,47 +24,74 @@ body {
     padding-top: 17px;
 }
 
-.nav-list {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+.header__logo img {
+    width: 160px;
+    height: auto;
+    display: block;
 }
 
+/* 1. Список стає рядком і без крапок */
+.nav-list {
+    display: flex;
+    /* Вже є, просто переконайся */
+    list-style: none;
+    /* Прибирає крапки */
+    gap: 30px;
+    /* Відстань між Product, Customers тощо */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Посилання: спочатку всі однакові (чорні, не жирні) */
 .nav-list__link {
     text-decoration: none;
     color: var(--text-main);
     font-weight: var(--font-weight-medium);
+    transition: color 0.3s ease, font-weight 0.2s ease;
 }
 
-.nav-list__link--active {
+/* 3. Магія при наведенні: помаранчевий + жирний */
+.nav-list__link:hover {
+    color: var(--accent-orange);
+    /* Колір #FF9900 з твоїх vars.css */
     font-weight: var(--font-weight-bold);
-    color: var(--primary-color);
 }
 
-/* Кнопки */
+/* --- Універсальні Кнопки --- */
+
 .btn {
+    /* Розміри та шрифт */
     padding: 12px 25px;
     border-radius: 4px;
     font-weight: var(--font-weight-bold);
-    cursor: pointer;
-    border: none;
     font-family: inherit;
-    transition: 0.3s;
-}
+    font-size: 16px;
 
-.btn--outline {
-    background: transparent;
+    /* Базовий стан: біла з рамкою */
+    background-color: #ffffff;
+    color: var(--text-main);
     border: 1px solid #BCD0E5;
-    margin-right: 15px;
+
+    /* Взаємодія */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-.btn--filled {
-    background-color: var(--accent-orange);
-    color: var(--white);
-}
-
+/* Стан при наведенні для ВСІХ кнопок на сайті */
 .btn:hover {
-    opacity: 0.8;
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: #ffffff;
+    opacity: 1;
+    /* Гарантуємо, що ніяка прозорість не заважає */
+}
+
+/* Контейнери для відступів (флексбокси залишаємо там, де треба ряд) */
+.header__auth {
+    display: flex;
+    gap: 15px;
 }
 
 /* Hero Section */
