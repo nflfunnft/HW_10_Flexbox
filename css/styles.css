@@ -355,7 +355,7 @@ body {
 }
 
 .footer__title {
-    font-family: var(--font-accent);
+    font-family: var(--font-main);
     /* Gotham  якщо ще зможу підключити*/
     font-size: 20px;
     font-weight: var(--font-weight-bold);
@@ -406,7 +406,6 @@ body {
 .footer__form .btn {
     align-self: flex-start;
     background-color: var(--white);
-    /* Білий фон за замовчуванням */
     color: var(--text-main);
     border: 1px solid #BCD0E5;
 }
@@ -420,13 +419,9 @@ body {
 /* Стиль для невалідного введення, коли поле у фокусі */
 .footer__input:focus:invalid {
     border-color: var(--icon-red);
-    /* Використовуємо існуючий червоний колір */
-    background-color: rgba(240, 62, 62, 0.05);
-    /* Легкий червоний відтінок фону */
 }
 
 /* Стиль для валідного введення (підсвічуємо зеленим) */
 .footer__input:focus:valid {
     border-color: var(--primary-color);
-    /* Використовуємо існуючий зелений колір */
 }
