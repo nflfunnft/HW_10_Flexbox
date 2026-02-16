@@ -65,10 +65,21 @@ body {
 
 /* --- 3. Кнопки --- */
 .header__auth {
+    width: 252px;
     display: flex;
+    justify-content: flex-end;
     gap: 15px;
     flex-shrink: 0;
-    /* Щоб кнопки не стискалися */
+}
+
+/* Додаємо правило конкретно для кнопок у хедері щоб вони були однакового розміру*/
+.header__auth .btn {
+    /* flex: 1 змусить обидві кнопки розтягнутися і поділити доступні 252px порівну */
+    flex: 1;
+    padding: 12px 0;
+    /* Обнуляємо бокові падінги, щоб текст не заважав центруванню */
+    text-align: center;
+    /* Текст рівно посередині */
 }
 
 .btn {
@@ -217,4 +228,93 @@ body {
 .features__action {
     display: flex;
     justify-content: center;
+}
+
+/* --- Promo Section --- */
+.promo {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    /* Відступ між великими блоками */
+}
+
+.promo-item:last-child {
+    margin-bottom: 0;
+}
+
+/* МАГІЯ: другий блок міняється місцями */
+.promo-item--reverse {
+    flex-direction: row-reverse;
+}
+
+.promo-item__content {
+    flex: 1;
+}
+
+.promo-item__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.promo-item__image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Текстові стилі згідно Figma */
+.promo-item__subtitle {
+    display: block;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.promo-item__title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 23px;
+    color: var(--text-main);
+}
+
+.promo-item__description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.promo-item__feature-title {
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+/* Стилі для списку у другому блоці */
+.promo-item__checklist {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.promo-item__checklist li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+/* Іконка галочки для списку (через фонове зображення або іконку) */
+.promo-item__checklist li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-weight: bold;
 }
