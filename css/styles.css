@@ -62,7 +62,7 @@ body {
     font-weight: var(--font-weight-bold);
 }
 
-/* --- 3. Кнопки --- */
+/* --- Кнопки --- */
 .header__auth {
     width: 252px;
     display: flex;
@@ -233,7 +233,6 @@ body {
     display: flex;
     align-items: center;
     gap: 100px;
-    /* Збільшив відступ для більшої схожості з Figma */
     margin-bottom: 100px;
 }
 
@@ -288,7 +287,7 @@ body {
     color: var(--text-main);
 }
 
-/* --- Стилізація списку з квадратиками (Блок Product Managers) --- */
+/* --- Стилізація списку з квадратиками (Блок promo-item promo-item--reverse) --- */
 
 .promo-item__checklist {
     list-style: none;
@@ -325,4 +324,109 @@ body {
     background-position: center;
     background-size: 24px;
     /* Розмір галочки всередині */
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 70px 0;
+    border-top: 1px solid #BCD0E5;
+    /* Лінія з макета */
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    /* Розподіл на 4 колонки */
+    gap: 30px;
+}
+
+.footer__col {
+    flex: 1;
+}
+
+.footer__col--form {
+    flex: 1.5;
+    /* Блок з формою трохи ширший */
+}
+
+.footer__logo img {
+    width: 160px;
+    height: auto;
+}
+
+.footer__title {
+    font-family: var(--font-accent);
+    /* Gotham  якщо ще зможу підключити*/
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__list li {
+    margin-bottom: 15px;
+}
+
+/* Посилання: колір змінюється на помаранчевий і стає жирнішим як у хедері*/
+.footer__list .nav-list__link {
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-regular);
+    transition: all 0.3s ease;
+}
+
+.footer__list .nav-list__link:hover {
+    color: var(--accent-orange);
+    font-weight: var(--font-weight-bold);
+    /* Ефект як у хедері */
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__input {
+    width: 100%;
+    max-width: 325px;
+    padding: 15px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    outline: none;
+}
+
+/* Кнопка: спочатку біла з рамкою, при наведенні - помаранчева */
+.footer__form .btn {
+    align-self: flex-start;
+    background-color: var(--white);
+    /* Білий фон за замовчуванням */
+    color: var(--text-main);
+    border: 1px solid #BCD0E5;
+}
+
+.footer__form .btn:hover {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: var(--white);
+}
+
+/* Стиль для невалідного введення, коли поле у фокусі */
+.footer__input:focus:invalid {
+    border-color: var(--icon-red);
+    /* Використовуємо існуючий червоний колір */
+    background-color: rgba(240, 62, 62, 0.05);
+    /* Легкий червоний відтінок фону */
+}
+
+/* Стиль для валідного введення (підсвічуємо зеленим) */
+.footer__input:focus:valid {
+    border-color: var(--primary-color);
+    /* Використовуємо існуючий зелений колір */
 }

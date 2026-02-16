@@ -17,6 +17,8 @@
 
     /* Типографіка */
     --font-main: 'Montserrat', sans-serif;
+    --font-accent: 'Gotham', 'Montserrat', sans-serif;
+    /* Додаємо Gotham - хоча він комерційний*/
     --font-weight-bold: 700;
     --font-weight-medium: 500;
     --font-weight-regular: 400;
