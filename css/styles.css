@@ -110,6 +110,7 @@ body {
 
 .hero__content {
     flex: 1;
+    max-width: 500px;
 }
 
 .hero__title {
@@ -124,28 +125,17 @@ body {
     margin-bottom: 20px;
 }
 
-/* Овал за картинкою */
 .hero__image {
     flex: 1;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero__image::before {
-    content: "";
-    position: absolute;
-    /* Розміри у відсотках відносно блоку з картинкою */
-    width: 75%;
-    height: 90%;
-    background-color: var(--hero-bg-circle);
-    /* Трикутний овал */
-    border-radius: 52% 48% 32% 68% / 28% 42% 58% 72%;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(5deg);
+.hero__image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero__image img {
