@@ -64,17 +64,15 @@ body {
 
 /* --- Кнопки --- */
 .header__auth {
-    width: 252px;
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+    gap: 32px;
     flex-shrink: 0;
 }
 
-/* Додаємо правило конкретно для кнопок у хедері щоб вони були однакового розміру*/
 .header__auth .btn {
-    /* flex: 1 змусить обидві кнопки розтягнутися і поділити доступні 252px порівну */
-    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    white-space: nowrap;
     padding: 12px 0;
     /* Обнуляємо бокові падінги, щоб текст не заважав центруванню */
     text-align: center;
